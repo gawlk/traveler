@@ -605,7 +605,8 @@ def main():
         print('distance:', total)
         print('time:', end - start, 'secondes')
 
-        os.system("python3 library/plot.py " + filename + ' ' + solution)
+        if (os.path.isfile("library/plot.py")):
+            os.system("python3 library/plot.py " + filename + ' ' + solution)
 
         choice = menu()
 
